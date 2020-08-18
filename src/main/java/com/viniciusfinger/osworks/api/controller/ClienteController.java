@@ -19,9 +19,10 @@ public class ClienteController {
 		cliente1.setNome("Vinicius");
 		cliente1.setTelefone("51983043447");
 		cliente1.setEmail("vinicius.finger2018@gmail.com");
+		
 		cliente2.setId(2l);
 		cliente2.setNome("Caue");
-		cliente2.setTelefone("51983043447");
+		cliente2.setTelefone("5198304344");
 		cliente2.setEmail("vinicius@gmail.com");
 		
 		return Arrays.asList(cliente1, cliente2);
