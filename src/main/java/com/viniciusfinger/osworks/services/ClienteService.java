@@ -53,4 +53,13 @@ public class ClienteService {
 			return ResponseEntity.ok("Cliente removido com sucesso.");
 		}
 	}
+	
+	public ResponseEntity<List<Cliente>> findByNomeContaining(String name) {
+		List<Cliente> clientes = repository.findByNomeContaining(name);
+		if (clientes.size() <= 0) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(clientes);
+		}
+	}
 }

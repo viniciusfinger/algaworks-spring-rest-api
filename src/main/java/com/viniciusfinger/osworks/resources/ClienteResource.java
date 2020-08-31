@@ -35,6 +35,11 @@ public class ClienteResource {
 		Cliente cliente = service.findById(clienteId);
 		return ResponseEntity.ok(cliente);
 	}
+	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Cliente>> buscaPeloNome(@PathVariable String nome) {
+		return service.findByNomeContaining(nome);
+	}
 
 	@PostMapping
 	public ResponseEntity<Cliente> adicionaCliente(@Valid @RequestBody Cliente cliente) {
